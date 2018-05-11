@@ -1,0 +1,29 @@
+<h1>Best site ever bitches🤬</h1>
+
+<% if user_signed_in? %>
+<%= render 'posts/form' %>
+
+<table>
+<br>
+  <tbody class="user-block">
+    <br>
+<% @posts.each do |post| %>
+  <tr>
+
+    <td><%= post.user.username %> </td>
+    <td><%= post.post %>
+    </td>
+
+    <td><button><%= link_to 'Show', post %></button></td>
+    <% if current_user && @post.user_id == current_user.id %>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+
+</tbody>
+</table>
+<br>
+<% end %>
+<br>
