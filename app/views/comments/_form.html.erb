@@ -1,0 +1,10 @@
+<%= form_for([@post, @post.user.comments.build]) do |f| %>
+<div>
+    <%= f.label :How_do_really_feel? %>
+    <%= f.text_area :content %>
+</div>
+<div>
+    <%= f.submit  %>
+</div>
+<%= link_to "Cancel", root_path %>
+<% end %>

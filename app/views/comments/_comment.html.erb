@@ -1,0 +1,13 @@
+<div class="">
+  <p class="media">
+    <div class="">
+      <p>
+      <strong><%= post.user.comments.username %>: </strong>
+      <%= post.user.comments.content %>
+
+      </p>
+    </div>
+    <%= link_to 'Delete', [comment.post, comment], method: :delete, data: {confirm: "Are you sure?" } %>
+    <hr />
+  </p>
+</div>

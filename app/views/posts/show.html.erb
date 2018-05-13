@@ -2,7 +2,7 @@
 
 <p>
   <strong>Post By:
-    <%= @post.user.email %></strong>
+    <%= @post.user.username %></strong>
 </p>
 <div class="">
   <%= @post.post %>
@@ -11,4 +11,21 @@
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to "delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this post"} %>
 <% end %>
+
+
 <%= link_to 'Back', posts_path %>
+
+<section class="comments">
+
+<div class="container">
+  <h2 class=""><%= @post.user.comments.count %> Comments</h2>
+  <%= render @post.user.comments %>
+  <div class="comment-form">
+    <hr />
+
+  <h3 class="subtitle">Leave a reply</h3>
+  <%= render 'comments/form' %>
+
+  </div>
+</div>
+</section>
