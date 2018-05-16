@@ -1,0 +1,5 @@
+<%= @user.username %>'s Profile
+
+<% if @user.id == current_user.id %>
+  <%= link_to 'Edit Profile', edit_user_registration_path(@user) %>
+<% end %>
