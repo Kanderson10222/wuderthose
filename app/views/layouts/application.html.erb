@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogg</title>
+    <title>KickzBlogg</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,11 +23,11 @@
 
     <nav class="navbar">
       <%= link_to root_path, class: "navi" do %>
-      <h1 class="title">Kickz Blog</h1>
+      <h1 class="title">👇🏾 Wuder Those 👀</h1>
       <% end %>
 
       <% if user_signed_in? %>
-
+      
       <p class="newone">
         <%= link_to 'New Post', new_post_path, class: "postie" %>
       </p>
@@ -37,18 +37,21 @@
       <div class="signOut">
         <%= link_to 'sign-out', destroy_user_session_path, method: :delete %>
       </div>
-      <div class="indi"><strong>Hi <%= current_user.username %>!</strong></div>
+      <div class="individual"><strong>Hi <%= current_user.username %>!</strong></div>
       <% else %>
-      <div class="">
+      <div class="signin">
         <%= link_to "Sign-in", new_user_session_path %>
       </div>
-      <div class="">
+      <div class="signup">
       <%= link_to "Sign-up", new_user_registration_path %>
       </div>
 
 
       <% end %>
     </nav>
+
+
     <%= yield %>
   </body>
+  <footer>Wuder Those 👀 | Kobi 2018 ©️ </footer>
 </html>
