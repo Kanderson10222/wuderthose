@@ -4,7 +4,9 @@
 <base src="assets/offwhite1.jpg">
 <div id="carousel">
   <figure id="spinner">
+    <%= link_to new_post_path, class: "postie" do %>
     <img src="assets/offwhite1.jpg" alt>
+    <% end %>
     <img src="assets/1jays.jpg" alt=>
     <img src="assets/presto.jpg" alt>
     <img src="assets/14jays.jpg" alt>
@@ -28,11 +30,10 @@
 <% @posts.each do |post| %>
   <tr>
 
-    <td><%= post.user.username %> </td>
-    <td><%= post.post %>
-    </td>
-
-    <td><button><%= link_to 'Show', post %></button></td>
+    <p class="postby">By:<%= post.user.username %> </p>
+    <p class="thepost"><%= post.post %>
+      <button><%= link_to 'Show', post %></button>
+    </p>
     <% if current_user && @post.user_id == current_user.id %>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
