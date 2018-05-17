@@ -7,7 +7,7 @@
     <%= link_to new_post_path, class: "postie" do %>
     <img src="assets/offwhite1.jpg" alt>
     <% end %>
-    <img src="assets/1jays.jpg" alt=>
+    <img src="assets/1jays.jpg" alt>
     <img src="assets/presto.jpg" alt>
     <img src="assets/14jays.jpg" alt>
     <img src="assets/15brons.jpg" alt>
@@ -30,7 +30,7 @@
 <% @posts.each do |post| %>
   <tr>
 
-    <p class="postby">By:<%= post.user.username %> </p>
+    <p class="postby">By:<%=link_to post.user.username, user_path(post.user)%> </p>
     <p class="thepost"><%= post.post %>
       <button><%= link_to 'Show', post %></button>
     </p>
