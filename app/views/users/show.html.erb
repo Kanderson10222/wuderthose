@@ -1,6 +1,10 @@
 <div class="profile-indi">
 <%= @user.username %>'s Profile
+<% if @user.avatar.url %>
+<%= image_tag @user.avatar.url %>
+<% end %>
 </div>
+
 <% if @user.id == current_user.id %>
   <%= link_to 'Edit Profile', edit_user_registration_path(@user) %>
 <% end %>
