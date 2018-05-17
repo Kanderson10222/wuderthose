@@ -25,7 +25,7 @@
       <%= link_to root_path, class: "navi" do %>
       <h1 class="title">👇🏾 Wuder Those 👀</h1>
       <% end %>
-
+    
       <% if user_signed_in? %>
 
       <p class="newone">
@@ -35,7 +35,7 @@
         <%= link_to "Profile", user_path(current_user) %>
       </div>
       <div class="">
-        <%= link_to "All SneakerHeads", users_path %>
+        <%= link_to "Fellow SneakerHeads", users_path %>
       </div>
       <div class="">
         <%= link_to "edit info", edit_user_registration_path(current_user) %>

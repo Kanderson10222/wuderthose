@@ -1,5 +1,6 @@
+<div class="profile-indi">
 <%= @user.username %>'s Profile
-
+</div>
 <% if @user.id == current_user.id %>
   <%= link_to 'Edit Profile', edit_user_registration_path(@user) %>
 <% end %>
