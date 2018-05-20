@@ -31,7 +31,7 @@
   <tr>
 
     <p class="postby">By:<%=link_to post.user.username, user_path(post.user)%> </p>
-    <p class="thepost"><%= post.post %>
+    <p class="thepost"><%= post.post %> <%=link_to image_tag post.avatar.url %>
       <button><%= link_to 'Show', post %></button>
     </p>
     <% if current_user && @post.user_id == current_user.id %>

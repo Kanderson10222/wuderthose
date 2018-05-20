@@ -5,6 +5,7 @@
 
 
 h1{
+  padding-top: 5px;
   font-family:'Permanent Marker', cursive;
   font-size: 26px;
 }
@@ -17,6 +18,13 @@ h1{
 
 img{
   border-radius: 25%;
+  width: 200px;
+  height: 200px;
+}
+
+.individual img{
+  border-radius: 25%;
   width: 100px;
   height: 100px;
+  padding: 10px;
 }
