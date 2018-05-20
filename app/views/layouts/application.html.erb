@@ -43,7 +43,7 @@
       <div class="signOut">
         <%= link_to 'sign-out', destroy_user_session_path, method: :delete %>
       </div>
-      <div class="individual"><strong>Hi <%= current_user.username %>!</strong></div>
+      <div class="individual"><strong>Hi <%= current_user.username %>!<%=image_tag current_user.avatar.url %></strong></div>
       <% else %>
       <div class="signin">
         <%= link_to "Sign-in", new_user_session_path %>
@@ -54,8 +54,8 @@
 
 
       <% end %>
-    </nav>
 
+    </nav>
 
     <%= yield %>
   </body>
