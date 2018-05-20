@@ -16,7 +16,8 @@
 
 .navbar{
   background-color:#4bc1e847;
-  
+  border-radius: 8px;
+
 }
 .title{
   font-family:'Permanent Marker', cursive;
@@ -31,6 +32,7 @@ h1{
 .individual{
   text-align: right;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 body{
   background-color: #7f79795e;
@@ -41,4 +43,9 @@ footer{
 .signin, .signup{
   font-family:'Permanent Marker', cursive;
   text-align: right;
+}
+
+a{
+  padding-left: 5px;
+  font-family:'Permanent Marker', cursive;
 }

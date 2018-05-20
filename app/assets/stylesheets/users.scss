@@ -10,10 +10,17 @@ h1{
   font-size: 26px;
 }
 
-.profile-indi{
+.profile-indi {
   text-align: center;
   font-family:'Permanent Marker', cursive;
   font-size: 26px;
+
+}
+.profile-indi img{
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
+  padding: 10px
 }
 
 img{

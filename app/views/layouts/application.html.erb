@@ -29,15 +29,15 @@
       <% if user_signed_in? %>
 
       <p class="newone">
-        <%= link_to 'New Post', new_post_path, class: "postie" %>
+        <%= link_to 'Kickz of the Day', new_post_path, class: "postie" %>
       </p>
-      <div class="">
+      <div class="Profile">
         <%= link_to "Profile", user_path(current_user) %>
       </div>
-      <div class="">
+      <div class="Fellow-Sneakerheads">
         <%= link_to "Fellow SneakerHeads", users_path %>
       </div>
-      <div class="">
+      <div class="edit-info">
         <%= link_to "edit info", edit_user_registration_path(current_user) %>
       </div>
       <div class="signOut">
