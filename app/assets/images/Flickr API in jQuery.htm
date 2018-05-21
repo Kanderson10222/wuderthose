@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/Kob10222/Desktop/flickr/jquery-flickr/flickr.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Flickr API in jQuery</title>
+  
+  <style type="text/css">
+    body {
+      background: #eee;
+      font-family: monaco, 'courier new', helvetica, sans-serif;
+    }
+
+    #container {
+      width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #ccc;
+    }
+
+    h1 {
+      color: #eee;
+      font-size: 12px;
+      margin-bottom: 10px;
+      font-weight: normal;
+      background: #111;
+      padding: 7px;
+    }
+
+    h1 span {
+      color: #999;
+    }
+
+    a img {
+      border: 0;
+      margin: 0;
+    }
+
+    div {
+      margin-bottom: 35px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li {
+      display: inline;
+    }
+  </style>
+  <script src="./Flickr API in jQuery_files/jquery.min.js" type="text/javascript"></script>
+  <script src="./Flickr API in jQuery_files/jquery.flickr.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var config = {
+        api_key: 'e11acbbd6ab5d18206c964517f6197a5',
+        link_to_size: 'm'
+      }
+
+      $('#recent').flickr(config).photosGetRecent({
+        per_page: 10
+      })
+      $('#contacts').flickr(config).photosGetContactsPublicPhotos({
+        user_id: '140117506@N02',
+        count: 15
+      })
+      $('#search').flickr(config).photosSearch({
+        text: 'sneakers',
+        per_page: 5
+      })
+      $('#portfolio').flickr(config).photosSearch({
+        user_id: '95448703@N00',
+        per_page: 15,
+        tags: 'portfolio'
+      })
+      $('#photoset').flickr(config).photosetsGetPhotos({
+        photoset_id: '72157634072148891',
+        per_page: 16
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <p>
+    <input type="text" name="" id="">
+    <button type="submit" name="" id="search">Search<ul class="flickr"><li><a href="http://farm1.static.flickr.com/974/42211484742_2745a741d6.jpg" title="Trendy Women&#39;s Sneakers : New Balance | New Balance 420 Grey And Black Suede Trainers"><img src="./Flickr API in jQuery_files/42211484742_2745a741d6_s.jpg" alt="Trendy Women&#39;s Sneakers : New Balance | New Balance 420 Grey And Black Suede Trainers"></a></li>
+<li><a href="http://farm1.static.flickr.com/979/40450852030_cb40ec0b8b.jpg" title="2018_0522_1"><img src="./Flickr API in jQuery_files/40450852030_cb40ec0b8b_s.jpg" alt="2018_0522_1"></a></li>
+<li><a href="http://farm1.static.flickr.com/958/41352951295_2f2695ddee.jpg" title="136/365"><img src="./Flickr API in jQuery_files/41352951295_2f2695ddee_s.jpg" alt="136/365"></a></li>
+<li><a href="http://farm1.static.flickr.com/963/40447930200_3eb81464d1.jpg" title="Großes Bügelbild CAP RUN,  Print Patch zum aufbügeln"><img src="./Flickr API in jQuery_files/40447930200_3eb81464d1_s.jpg" alt="Großes Bügelbild CAP RUN,  Print Patch zum aufbügeln"></a></li>
+<li><a href="http://farm1.static.flickr.com/974/40447892660_6e0b4049e0.jpg" title="Chrome"><img src="./Flickr API in jQuery_files/40447892660_6e0b4049e0_s.jpg" alt="Chrome"></a></li></ul></button>
+    <button id="search">play</button>
+  </p>
+  <div id="container">
+    <h1>photosGetRecent()</h1>
+    <div id="recent"><ul class="flickr"><li><a href="http://farm1.static.flickr.com/967/27387637097_5b6f6167f1.jpg" title="Stagecoach Lincolnshire 36450 OU61 AUX"><img src="./Flickr API in jQuery_files/27387637097_5b6f6167f1_s.jpg" alt="Stagecoach Lincolnshire 36450 OU61 AUX"></a></li>
+<li><a href="http://farm1.static.flickr.com/824/27387638817_83b9cd6ec7.jpg" title="DSC_5244.jpg"><img src="./Flickr API in jQuery_files/27387638817_83b9cd6ec7_s.jpg" alt="DSC_5244.jpg"></a></li>
+<li><a href="http://farm1.static.flickr.com/956/27387639447_699b4957d8.jpg" title="IMG-20180504-WA0067"><img src="./Flickr API in jQuery_files/27387639447_699b4957d8_s.jpg" alt="IMG-20180504-WA0067"></a></li>
+<li><a href="http://farm1.static.flickr.com/828/27387639667_868740f80f.jpg" title="IMG_5624"><img src="./Flickr API in jQuery_files/27387639667_868740f80f_s.jpg" alt="IMG_5624"></a></li>
+<li><a href="http://farm1.static.flickr.com/952/28384869338_dea67fdebd.jpg" title="DSC02398_DxO.jpg"><img src="./Flickr API in jQuery_files/28384869338_dea67fdebd_s.jpg" alt="DSC02398_DxO.jpg"></a></li>
+<li><a href="http://farm1.static.flickr.com/963/28384870738_e968056d20.jpg" title="TRENDING NOW!! HOT 2017 Jewelry!!"><img src="./Flickr API in jQuery_files/28384870738_e968056d20_s.jpg" alt="TRENDING NOW!! HOT 2017 Jewelry!!"></a></li>
+<li><a href="http://farm1.static.flickr.com/972/40451411080_4ee02f3c6e.jpg" title="Cinnamon Bittern (Ixobrychus cinnamomeus), Budai Wetlands, Chiayi County, TW, 20180429-101.jpg"><img src="./Flickr API in jQuery_files/40451411080_4ee02f3c6e_s.jpg" alt="Cinnamon Bittern (Ixobrychus cinnamomeus), Budai Wetlands, Chiayi County, TW, 20180429-101.jpg"></a></li>
+<li><a href="http://farm1.static.flickr.com/975/40451413040_4a4a164132.jpg" title="LRM_EXPORT_20180520_011007"><img src="./Flickr API in jQuery_files/40451413040_4a4a164132_s.jpg" alt="LRM_EXPORT_20180520_011007"></a></li>
+<li><a href="http://farm1.static.flickr.com/945/42211939362_662075aed3.jpg" title="test123"><img src="./Flickr API in jQuery_files/42211939362_662075aed3_s.jpg" alt="test123"></a></li>
+<li><a href="http://farm1.static.flickr.com/826/42258516651_339d6d4958.jpg" title="5b02f09690ac2"><img src="./Flickr API in jQuery_files/42258516651_339d6d4958_s.jpg" alt="5b02f09690ac2"></a></li></ul></div>
+
+    <h1>photosGetContactsPublicPhotos(<span>{user_id: '95448703@N00', count: 10}</span>)</h1>
+    <div id="contacts"><ul class="flickr"><li><a href="http://farm1.static.flickr.com/904/40398195550_731fc393ac.jpg" title="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 04"=""><img src="./Flickr API in jQuery_files/40398195550_731fc393ac_s.jpg" alt="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 04"=""></a></li>
+<li><a href="http://farm1.static.flickr.com/945/41304752755_02eba517c4.jpg" title="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 03"=""><img src="./Flickr API in jQuery_files/41304752755_02eba517c4_s.jpg" alt="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 03"=""></a></li>
+<li><a href="http://farm1.static.flickr.com/948/40398197840_b1843640fd.jpg" title="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 02"=""><img src="./Flickr API in jQuery_files/40398197840_b1843640fd_s.jpg" alt="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 02"=""></a></li>
+<li><a href="http://farm1.static.flickr.com/980/41304755985_589a1964b4.jpg" title="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 01"=""><img src="./Flickr API in jQuery_files/41304755985_589a1964b4_s.jpg" alt="Air Jordan 1 Retro High OG NRG " homage="" to="" home"="" 01"=""></a></li>
+<li><a href="http://farm1.static.flickr.com/981/27311376827_1d3b0544d6.jpg" title="Under Armour Curry 5 " welcome="" home"="" 01"=""><img src="./Flickr API in jQuery_files/27311376827_1d3b0544d6_s.jpg" alt="Under Armour Curry 5 " welcome="" home"="" 01"=""></a></li>
+<li><a href="http://farm1.static.flickr.com/910/28265485518_18555dfdc3.jpg" title="En attendant les beaux jours"><img src="./Flickr API in jQuery_files/28265485518_18555dfdc3_s.jpg" alt="En attendant les beaux jours"></a></li>
+<li><a href="http://farm1.static.flickr.com/951/40283984240_ec3e448ece.jpg" title="Gare de Perpignan (décrétée Centre du Monde par Dali)"><img src="./Flickr API in jQuery_files/40283984240_ec3e448ece_s.jpg" alt="Gare de Perpignan (décrétée Centre du Monde par Dali)"></a></li>
+<li><a href="http://farm1.static.flickr.com/828/27221442157_7ee633ccca.jpg" title="Dame au foulard"><img src="./Flickr API in jQuery_files/27221442157_7ee633ccca_s.jpg" alt="Dame au foulard"></a></li>
+<li><a href="http://farm1.static.flickr.com/953/28218169698_9f319d2f64.jpg" title=""><img src="./Flickr API in jQuery_files/28218169698_9f319d2f64_s.jpg" alt=""></a></li>
+<li><a href="http://farm1.static.flickr.com/908/27221419817_a218928513.jpg" title="Jongleur de rue"><img src="./Flickr API in jQuery_files/27221419817_a218928513_s.jpg" alt="Jongleur de rue"></a></li>
+<li><a href="http://farm1.static.flickr.com/977/42039555392_7f4569743f.jpg" title="Iconic table mountain n the city of Cape Town!"><img src="./Flickr API in jQuery_files/42039555392_7f4569743f_s.jpg" alt="Iconic table mountain n the city of Cape Town!"></a></li>
+<li><a href="http://farm1.static.flickr.com/943/40099086830_c91a65d33a.jpg" title="...if it was manipulation...its been successful..."><img src="./Flickr API in jQuery_files/40099086830_c91a65d33a_s.jpg" alt="...if it was manipulation...its been successful..."></a></li>
+<li><a href="http://farm1.static.flickr.com/825/41868329861_bbc0539600.jpg" title="Lake of wonders!"><img src="./Flickr API in jQuery_files/41868329861_bbc0539600_s.jpg" alt="Lake of wonders!"></a></li>
+<li><a href="http://farm1.static.flickr.com/943/41765012812_763b0af8d2.jpg" title="It&#39;s always the small pieces that make the big picture!"><img src="./Flickr API in jQuery_files/41765012812_763b0af8d2_s.jpg" alt="It&#39;s always the small pieces that make the big picture!"></a></li>
+<li><a href="http://farm1.static.flickr.com/870/27823168058_0b4b35dc5b.jpg" title="The posing birds!"><img src="./Flickr API in jQuery_files/27823168058_0b4b35dc5b_s.jpg" alt="The posing birds!"></a></li></ul></div>
+
+    <h1>photosSearch(<span>{user_id: '95448703@N00', per_page: 10}</span>)</h1>
+    <div id="search"></div>
+
+    <h1>photosSearch(<span>{user_id: '95448703@N00', per_page: 10, tags: 'portfolio'}</span>)</h1>
+    <div id="portfolio"><ul class="flickr"><li><a href="http://farm3.static.flickr.com/2401/2065250662_81ceb44745.jpg" title="Watch your step"><img src="./Flickr API in jQuery_files/2065250662_81ceb44745_s.jpg" alt="Watch your step"></a></li>
+<li><a href="http://farm2.static.flickr.com/1096/1487897192_a9c7ac3f9d.jpg" title="Back to work"><img src="./Flickr API in jQuery_files/1487897192_a9c7ac3f9d_s.jpg" alt="Back to work"></a></li>
+<li><a href="http://farm2.static.flickr.com/1201/1487040729_284e16da4f.jpg" title="Eating dinner"><img src="./Flickr API in jQuery_files/1487040729_284e16da4f_s.jpg" alt="Eating dinner"></a></li>
+<li><a href="http://farm2.static.flickr.com/1048/1272733334_c24fe064b4.jpg" title="A Touch of Color"><img src="./Flickr API in jQuery_files/1272733334_c24fe064b4_s.jpg" alt="A Touch of Color"></a></li>
+<li><a href="http://farm2.static.flickr.com/1340/1133390980_fe43b36b01.jpg" title="Going Under"><img src="./Flickr API in jQuery_files/1133390980_fe43b36b01_s.jpg" alt="Going Under"></a></li>
+<li><a href="http://farm2.static.flickr.com/1313/765649235_18b5c80062.jpg" title="Fireworks"><img src="./Flickr API in jQuery_files/765649235_18b5c80062_s.jpg" alt="Fireworks"></a></li>
+<li><a href="http://farm2.static.flickr.com/1352/766490596_bcfb2c003a.jpg" title="Shades of grass"><img src="./Flickr API in jQuery_files/766490596_bcfb2c003a_s.jpg" alt="Shades of grass"></a></li>
+<li><a href="http://farm1.static.flickr.com/235/550398686_57c0c2f20c.jpg" title="Walkway"><img src="./Flickr API in jQuery_files/550398686_57c0c2f20c_s.jpg" alt="Walkway"></a></li>
+<li><a href="http://farm1.static.flickr.com/251/550396470_13f22ff0f6.jpg" title="Available"><img src="./Flickr API in jQuery_files/550396470_13f22ff0f6_s.jpg" alt="Available"></a></li>
+<li><a href="http://farm1.static.flickr.com/217/511858335_0a06c06b8c.jpg" title="Watch Your Step"><img src="./Flickr API in jQuery_files/511858335_0a06c06b8c_s.jpg" alt="Watch Your Step"></a></li>
+<li><a href="http://farm1.static.flickr.com/202/511858195_de78c9ccb7.jpg" title="Crash"><img src="./Flickr API in jQuery_files/511858195_de78c9ccb7_s.jpg" alt="Crash"></a></li>
+<li><a href="http://farm1.static.flickr.com/229/511843841_d114aea4a8.jpg" title="Lined up"><img src="./Flickr API in jQuery_files/511843841_d114aea4a8_s.jpg" alt="Lined up"></a></li>
+<li><a href="http://farm1.static.flickr.com/212/511803103_c94bbccb14.jpg" title="It&#39;s all mine"><img src="./Flickr API in jQuery_files/511803103_c94bbccb14_s.jpg" alt="It&#39;s all mine"></a></li>
+<li><a href="http://farm1.static.flickr.com/175/479259624_5673edec85.jpg" title="Cut in stone"><img src="./Flickr API in jQuery_files/479259624_5673edec85_s.jpg" alt="Cut in stone"></a></li></ul></div>
+
+    <h1>photosetsGetPhotos(<span>{photoset_id: '72157600185772527', per_page: 10}</span>)</h1>
+    <div id="photoset"><ul class="flickr"><li><a href="http://farm4.static.flickr.com/3752/8941492019_e16f04f98b.jpg" title="Nike Zoom Vapor 9 Tour SL - Roger Federer Wimbledon 2012"><img src="./Flickr API in jQuery_files/8941492019_e16f04f98b_s.jpg" alt="Nike Zoom Vapor 9 Tour SL - Roger Federer Wimbledon 2012"></a></li>
+<li><a href="http://farm6.static.flickr.com/5455/8895921078_310d8194ba.jpg" title="Nike Air Zoom Vapor VI Tour shoes, Federer RF, white/silver"><img src="./Flickr API in jQuery_files/8895921078_310d8194ba_s.jpg" alt="Nike Air Zoom Vapor VI Tour shoes, Federer RF, white/silver"></a></li>
+<li><a href="http://farm8.static.flickr.com/7304/8895920840_a58bcd7b67.jpg" title="Nike Air Zoom Vapor VI Tour shoes, Federer RF, white/silver"><img src="./Flickr API in jQuery_files/8895920840_a58bcd7b67_s.jpg" alt="Nike Air Zoom Vapor VI Tour shoes, Federer RF, white/silver"></a></li>
+<li><a href="http://farm8.static.flickr.com/7438/8859130137_f183f25cfa.jpg" title="Nike Vapor VI 2009 US Open Federer Night shoes"><img src="./Flickr API in jQuery_files/8859130137_f183f25cfa_s.jpg" alt="Nike Vapor VI 2009 US Open Federer Night shoes"></a></li>
+<li><a href="http://farm9.static.flickr.com/8121/8859129893_0aa6967843.jpg" title="Roger Federer shoes"><img src="./Flickr API in jQuery_files/8859129893_0aa6967843_s.jpg" alt="Roger Federer shoes"></a></li>
+<li><a href="http://farm4.static.flickr.com/3826/8859129667_ba8dfcbc29.jpg" title="Roger Federer 2009 US Open Day shoes"><img src="./Flickr API in jQuery_files/8859129667_ba8dfcbc29_s.jpg" alt="Roger Federer 2009 US Open Day shoes"></a></li>
+<li><a href="http://farm6.static.flickr.com/5470/8846681360_f70be25fd8.jpg" title="Nike Trainer 1 Mid – Roger Federer PE"><img src="./Flickr API in jQuery_files/8846681360_f70be25fd8_s.jpg" alt="Nike Trainer 1 Mid – Roger Federer PE"></a></li>
+<li><a href="http://farm8.static.flickr.com/7364/8846681154_8501812cb4.jpg" title="Nike Trainer 1 Mid – Roger Federer PE"><img src="./Flickr API in jQuery_files/8846681154_8501812cb4_s.jpg" alt="Nike Trainer 1 Mid – Roger Federer PE"></a></li>
+<li><a href="http://farm6.static.flickr.com/5470/8759726762_16153d0725.jpg" title="Federer RF Nike Air Zoom Vapor VI Tour Oreo&#39;s"><img src="./Flickr API in jQuery_files/8759726762_16153d0725_s.jpg" alt="Federer RF Nike Air Zoom Vapor VI Tour Oreo&#39;s"></a></li>
+<li><a href="http://farm9.static.flickr.com/8558/8759726616_4826a6fe88.jpg" title="Federer RF Nike Air Zoom Vapor VI Tour Oreo&#39;s"><img src="./Flickr API in jQuery_files/8759726616_4826a6fe88_s.jpg" alt="Federer RF Nike Air Zoom Vapor VI Tour Oreo&#39;s"></a></li>
+<li><a href="http://farm9.static.flickr.com/8277/8745542339_3ac5a7bf39.jpg" title="Rafael Nadal Nike Air Max Courtballistec 3.3 Davis Cup 2011 shoes"><img src="./Flickr API in jQuery_files/8745542339_3ac5a7bf39_s.jpg" alt="Rafael Nadal Nike Air Max Courtballistec 3.3 Davis Cup 2011 shoes"></a></li>
+<li><a href="http://farm9.static.flickr.com/8541/8745542169_9f6dea5acd.jpg" title="Rafael Nadal Nike Air Max Courtballistec 3.3 Davis Cup 2011 shoes"><img src="./Flickr API in jQuery_files/8745542169_9f6dea5acd_s.jpg" alt="Rafael Nadal Nike Air Max Courtballistec 3.3 Davis Cup 2011 shoes"></a></li>
+<li><a href="http://farm8.static.flickr.com/7281/8740329536_7773c4d240.jpg" title="Roger Federer Australian Open 2011 shoes"><img src="./Flickr API in jQuery_files/8740329536_7773c4d240_s.jpg" alt="Roger Federer Australian Open 2011 shoes"></a></li>
+<li><a href="http://farm8.static.flickr.com/7281/8737486210_99f0ef9cf1.jpg" title="Nike RF Lunarlite Vapor Tour 2010 US Open Night Shoes"><img src="./Flickr API in jQuery_files/8737486210_99f0ef9cf1_s.jpg" alt="Nike RF Lunarlite Vapor Tour 2010 US Open Night Shoes"></a></li>
+<li><a href="http://farm8.static.flickr.com/7285/8737486160_d9b60b33cd.jpg" title="Nike Lunarlite Vapor Tour 2010 US Open Night Shoes"><img src="./Flickr API in jQuery_files/8737486160_d9b60b33cd_s.jpg" alt="Nike Lunarlite Vapor Tour 2010 US Open Night Shoes"></a></li>
+<li><a href="http://farm8.static.flickr.com/7323/8735593743_02d01d7b66.jpg" title="Nike RF French Open Lunar Vapor 8 Tour in White/Sport Red colorway"><img src="./Flickr API in jQuery_files/8735593743_02d01d7b66_s.jpg" alt="Nike RF French Open Lunar Vapor 8 Tour in White/Sport Red colorway"></a></li></ul></div>
+  </div>
+
+
+
+</body></html>
