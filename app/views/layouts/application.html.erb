@@ -65,7 +65,7 @@
         api_key: 'e11acbbd6ab5d18206c964517f6197a5',
         link_to_size: 'm'
       }
-      $("#searchBtn").on("click", function(){
+      function search(){
         $("#search").empty();
         $('#search').flickr(config).photosSearch({
           text: $("#searchInput").val(),
@@ -73,7 +73,17 @@
         })
   // empty search box on submit
     $('#searchInput').val("");
-      })
+      }
+  // submits search on enter click
+      $('#searchInput').keydown(function (e) {
+
+   var key = e.which;
+   if(key == 13)  // the enter key code
+    { search();
+
+    }
+  });
+      $("#searchBtn").on("click", search)
     </script>
     <%= yield %>
   </body>
