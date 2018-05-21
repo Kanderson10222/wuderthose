@@ -71,7 +71,8 @@
           text: $("#searchInput").val(),
           per_page: 5
         })
-
+  // empty search box on submit
+    $('#searchInput').val("");
       })
     </script>
     <%= yield %>
