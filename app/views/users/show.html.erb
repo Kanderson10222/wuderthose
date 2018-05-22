@@ -8,7 +8,7 @@
 <div class="large-hover">
 <% @user.posts.each do |post| %>
           <p class="large-hover"><%=link_to image_tag(post.avatar.url), post %></p>
-         <p class="large-hover">Post: <%=link_to post.post, post %></p>
+         <p class="large-hover">- <%=link_to post.post, post %></p>
          <% if @user.id == current_user.id %>
          <div class="large-hover edButtons">
            <td class="editdelete"><%= link_to 'Edit', edit_post_path(post) %></td>
