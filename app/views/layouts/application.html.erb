@@ -29,19 +29,19 @@
       <% if user_signed_in? %>
 
       <p class="newone">
-        <%= link_to 'Kickz of the Day', new_post_path, class: "postie" %>
+        <%= link_to 'Kickz of the Day', new_post_path, class: "postie large-hover" %>
       </p>
       <div class="Profile">
-        <%= link_to "Profile", user_path(current_user) %>
+        <%= link_to "Profile", user_path(current_user), class: "large-hover" %>
       </div>
       <div class="Fellow-Sneakerheads">
-        <%= link_to "Fellow SneakerHeads", users_path %>
+        <%= link_to "Fellow SneakerHeads", users_path, class: "large-hover" %>
       </div>
       <div class="edit-info">
-        <%= link_to "edit info", edit_user_registration_path(current_user) %>
+        <%= link_to "edit info", edit_user_registration_path(current_user), class: "large-hover" %>
       </div>
       <div class="signOut">
-        <%= link_to 'sign-out', destroy_user_session_path, method: :delete %>
+        <%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "large-hover" %>
       </div>
       <div class="individual"><strong>Hi <%= current_user.username %>!<%=image_tag current_user.avatar.url %></strong></div>
       <% else %>

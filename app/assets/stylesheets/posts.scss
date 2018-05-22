@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.postie{
+  text-align: center;
+  padding: 5px;
+  font-family: 'Permanent Marker', cursive;
+  color: #ea3b3bd6;
+  font-size: 17px;
+}
+
 .postby{
   background-color: #61a3f4a1;
   font-family:'Permanent Marker', cursive;
@@ -62,3 +71,23 @@
     border-bottom: none;
     line-height: 0; }
   div#carousel ~ span:hover { color: #888; cursor: pointer; }
+
+  a:hover {
+    background-color: inherit
+  }
+  a.large-hover {
+    padding: 4px;
+
+    display:inline-block;
+  }
+  .large-hover {
+    transition: .3s all ease-in-out;
+    padding: 4px;
+
+
+  }
+  .large-hover:hover {
+    padding: 4px;
+    transform: scale(1.2);
+
+  }

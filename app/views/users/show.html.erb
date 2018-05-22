@@ -5,16 +5,16 @@
 <% end %>
 </div>
 
-<% if @user.id == current_user.id %>
-  <%= link_to 'Edit Profile', edit_user_registration_path(@user) %>
-<% end %>
-
+<div class="large-hover">
 <% @user.posts.each do |post| %>
-
-         <p>Post: <%=link_to post.post, post %><%= image_tag post.avatar.url %></p>
+          <p class="large-hover"><%=link_to image_tag(post.avatar.url), post %></p>
+         <p class="large-hover">Post: <%=link_to post.post, post %></p>
          <% if @user.id == current_user.id %>
-         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-         <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <div class="large-hover edButtons">
+           <td class="editdelete"><%= link_to 'Edit', edit_post_path(post) %></td>
+           <td class="editdelete"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         </div>
+</div>
        </tr>
      <% end %>
 <% end %>

@@ -1,4 +1,5 @@
-<h1>Best site ever bitches🤬</h1>
+
+<h1 class="large-hover">Best site ever bitches🤬</h1>
 
 <!-- CAROUSEL begins -->
 <base src="assets/offwhite1.png">
@@ -32,7 +33,7 @@
   <tr>
 
     <p class="postby">By:<%=link_to post.user.username, user_path(post.user)%> </p>
-    <p class="thepost"><%= post.post %> <%=link_to image_tag(post.avatar.url), post %>
+    <p class="postie large-hover"><%= post.post %></P> <p class="large-hover"><%=link_to image_tag(post.avatar.url), post %>
     </p>
     <% if current_user && @post.user_id == current_user.id %>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
