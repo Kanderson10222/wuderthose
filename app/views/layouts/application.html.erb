@@ -23,41 +23,71 @@
 
     <nav class="navbar">
       <%= link_to root_path, class: "navi" do %>
-      <h1 class="title">👇🏾 Wuder Those 👀</h1>
+      <h1 class="title large-hover">👇🏾 Wuder Those 👀</h1>
       <% end %>
 
       <% if user_signed_in? %>
 
       <p class="newone">
-        <%= link_to 'New Post', new_post_path, class: "postie" %>
+        <%= link_to 'Kickz of the Day', new_post_path, class: "postie large-hover" %>
       </p>
-      <div class="">
-        <%= link_to "Profile", user_path(current_user) %>
+      <div class="Profile">
+        <%= link_to "Profile", user_path(current_user), class: "large-hover" %>
       </div>
-      <div class="">
-        <%= link_to "Fellow SneakerHeads", users_path %>
+      <div class="Fellow-Sneakerheads">
+        <%= link_to "Fellow SneakerHeads", users_path, class: "large-hover" %>
       </div>
-      <div class="">
-        <%= link_to "edit info", edit_user_registration_path(current_user) %>
+      <div class="edit-info">
+        <%= link_to "edit info", edit_user_registration_path(current_user), class: "large-hover" %>
       </div>
       <div class="signOut">
-        <%= link_to 'sign-out', destroy_user_session_path, method: :delete %>
+        <%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "large-hover" %>
       </div>
       <div class="individual"><strong>Hi <%= current_user.username %>!<%=image_tag current_user.avatar.url %></strong></div>
       <% else %>
       <div class="signin">
-        <%= link_to "Sign-in", new_user_session_path %>
+        <%= link_to "Sign-in", new_user_session_path, class: "large-hover" %>
       </div>
       <div class="signup">
-      <%= link_to "Sign-up", new_user_registration_path %>
+      <%= link_to "Sign-up", new_user_registration_path, class: "large-hover" %>
       </div>
 
 
       <% end %>
-
     </nav>
+    <nav>
+      <p class="searchbox">
+          <input type="text" name="" id='searchInput'>
+          <button type="submit" name="" id='searchBtn'>Search</button>
+        </p>
+        <div class="large-hover"id="search"></div>
+    </nav>
+    <script>
+      var config = {
+        api_key: 'e11acbbd6ab5d18206c964517f6197a5',
+        link_to_size: 'm'
+      }
+      function search(){
+        $("#search").empty();
+        $('#search').flickr(config).photosSearch({
+          text: $("#searchInput").val(),
+          per_page: 5
+        })
+  // empty search box on submit
+    $('#searchInput').val("");
+      }
+  // submits search on enter click
+      $('#searchInput').keydown(function (e) {
 
+   var key = e.which;
+   if(key == 13)  // the enter key code
+    { search();
+
+    }
+  });
+      $("#searchBtn").on("click", search)
+    </script>
     <%= yield %>
   </body>
-  <footer>Wuder Those 👀 | Kobi 2018 ©️ </footer>
+  <footer class="footer">Wuder Those 👀 | Kobi 2018 ©️ </footer>
 </html>

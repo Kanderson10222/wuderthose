@@ -15,14 +15,28 @@
  */
 
 .navbar{
-  background-color:#4bc1e847;
-  
+  background-color:#61a3f4a1;
+  border-radius: 8px;
+  padding: 10px;
+
 }
 .title{
   font-family:'Permanent Marker', cursive;
   font-size: 26px;
+  font-weight: bold;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
 }
 
+li img {
+  width: 100%;
+  height: 100%;
+
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
 
 h1{
   text-align: center;
@@ -31,8 +45,10 @@ h1{
 .individual{
   text-align: right;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 body{
+  // background-image: url(eprint.png);
   background-color: #7f79795e;
 }
 footer{
@@ -41,4 +57,73 @@ footer{
 .signin, .signup{
   font-family:'Permanent Marker', cursive;
   text-align: right;
+}
+
+a{
+  padding-left: 5px;
+  font-family:'Permanent Marker', cursive;
+  text-decoration: none;
+}
+
+p{
+  text-align: center;
+}
+.postform{
+  text-align: center;
+}
+
+.flickr li{
+  display: inline-flex;
+  margin: auto;
+}
+a:hover {
+  background-color: inherit
+}
+a.large-hover {
+  display:inline-block;
+}
+.large-hover {
+  transition: .3s all ease-in-out;
+}
+.large-hover:hover {
+  transform: scale(1.2);
+}
+
+.edButtons{
+  text-align: center;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+label{
+  text-align: center;
+  padding: 5px;
+  font-family: 'Permanent Marker', cursive;
+  color: #df5753;
+  font-size: 17px;
+}
+input#post_avatar{
+  margin-right: -90px;
+  padding: 4px;
+
+}
+.row {
+  display: flex;
+  flex-flow: row nowrap;
 }

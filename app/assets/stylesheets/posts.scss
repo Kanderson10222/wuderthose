@@ -2,13 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.postie{
+  text-align: center;
+  padding: 5px;
+  font-family: 'Permanent Marker', cursive;
+  color: #ea3b3bd6;
+  font-size: 17px;
+}
+
 .postby{
   background-color: #61a3f4a1;
   font-family:'Permanent Marker', cursive;
   font-size: 22px;
    border-radius: 15px;
 }
-
+.thepost{
+  font-family:'Permanent Marker', cursive;
+  color: #ff00009c;
+}
 
 .user-block {
     margin: 15px;
@@ -19,7 +31,7 @@
 
   div#carousel {
     perspective: 1200px;
-    background: #100000;
+    background: #cfcdcd;
     padding-top: 10%;
     font-size:0;
     margin-bottom: 3rem;
@@ -48,7 +60,7 @@
   figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
   figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
   div#carousel ~ span {
-    color: #383232;
+    color: #8ab1ea;
     margin: 5%;
     display: inline-block;
     text-decoration: none;
@@ -59,3 +71,54 @@
     border-bottom: none;
     line-height: 0; }
   div#carousel ~ span:hover { color: #888; cursor: pointer; }
+
+  a:hover {
+    background-color: inherit
+  }
+  a.large-hover {
+    padding: 4px;
+
+    display:inline-block;
+  }
+  .large-hover {
+    transition: .3s all ease-in-out;
+    padding: 4px;
+
+
+  }
+  .large-hover:hover {
+    padding: 4px;
+    transform: scale(1.2);
+
+  }
+
+  input[type=text] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+  }
+
+  input[type=text]:focus {
+      width: 100%;
+  }
+
+  label{
+    text-align: center;
+    padding: 5px;
+    font-family: 'Permanent Marker', cursive;
+    color: #df5753;
+    font-size: 17px;
+  }
+  input#post_avatar{
+    margin-right: -90px;
+    padding: 4px;
+
+  }
