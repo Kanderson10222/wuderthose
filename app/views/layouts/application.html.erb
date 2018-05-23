@@ -28,22 +28,23 @@
 
       <% if user_signed_in? %>
 
-      <p class="newone">
+      <p class="newone" style=" top: -36px; position: relative; ">
         <%= link_to 'Kickz of the Day', new_post_path, class: "postie large-hover" %>
       </p>
-      <div class="Profile">
+      <div class="Profile" style="display: inline-flex;padding: 15px 25px;position: relative;top: -45px;">
         <%= link_to "Profile", user_path(current_user), class: "large-hover" %>
       </div>
-      <div class="Fellow-Sneakerheads">
+      <div class="Fellow-Sneakerheads" style="display: inline-flex;padding: 15px 25px;position: relative;top: -45px;">
         <%= link_to "Fellow SneakerHeads", users_path, class: "large-hover" %>
       </div>
-      <div class="edit-info">
+      <div class="edit-info" style="display: inline-flex;padding: 15px 25px;position: relative;top: -45px;">
         <%= link_to "edit info", edit_user_registration_path(current_user), class: "large-hover" %>
       </div>
-      <div class="signOut">
+      <div class="signOut" style="display: inline-flex;padding: 15px 25px;position: relative;top: -45px;">
         <%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "large-hover" %>
       </div>
-      <div class="individual"><strong>Hi <%= current_user.username %>!<%=image_tag current_user.avatar.url %></strong></div>
+      <div class="individual"></div>
+      <div class="userSign" ><strong>Hi <%= current_user.username %>!<%=image_tag current_user.avatar.url %></strong></div>
       <% else %>
       <div class="signin">
         <%= link_to "Sign-in", new_user_session_path, class: "large-hover" %>

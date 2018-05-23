@@ -18,13 +18,13 @@
   background-color:#61a3f4a1;
   border-radius: 8px;
   padding: 10px;
-
+  height: 210px;
 }
 .title{
   font-family:'Permanent Marker', cursive;
-  font-size: 26px;
+  font-size: 60px;
   font-weight: bold;
-    text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
+    text-shadow: 0px 3px 6px #fb4c4c8c;
 }
 
 li img {
@@ -46,6 +46,9 @@ h1{
   text-align: right;
   font-size: 18px;
   padding-bottom: 5px;
+  position: relative;
+  top: -128px;
+  z-index: -1;
 }
 body{
   // background-image: url(eprint.png);
@@ -126,4 +129,11 @@ input#post_avatar{
 .row {
   display: flex;
   flex-flow: row nowrap;
+}
+
+.userSign{
+  z-index: 1;
+  position: relative;
+  top: -282px;
+  left: 70%;
 }
