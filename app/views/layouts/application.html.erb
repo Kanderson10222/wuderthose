@@ -75,6 +75,13 @@
         })
   // empty search box on submit
     $('#searchInput').val("");
+  // opens image in new tab on click
+    setTimeout(function() {
+      var ul = document.getElementsByClassName("flickr")[0];
+      for (let k = 0; k < 5; k++) {
+        ul.children[k].children[0].target = "_blank";
+      }
+    }, 1000);
       }
   // submits search on enter click
       $('#searchInput').keydown(function (e) {
@@ -85,7 +92,7 @@
 
     }
   });
-      $("#searchBtn").on("click", search)
+      $("#searchBtn").on("click", search);
     </script>
     <%= yield %>
   </body>
