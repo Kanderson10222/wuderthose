@@ -30,7 +30,7 @@
   <tbody class="user-block">
     <br>
 <% @posts.each do |post| %>
-  <tr>
+  <tr class="row">
 
     <p class="postby"><%=link_to post.user.username, user_path(post.user)%> </p>
     <p class="postie large-hover"><%= post.post %></P> <p class="large-hover"><%=link_to image_tag(post.avatar.url), post %>
