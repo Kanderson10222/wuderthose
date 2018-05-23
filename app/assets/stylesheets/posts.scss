@@ -31,7 +31,7 @@
 
   div#carousel {
     perspective: 1200px;
-    background: #100000;
+    background: #cfcdcd;
     padding-top: 10%;
     font-size:0;
     margin-bottom: 3rem;
@@ -60,7 +60,7 @@
   figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
   figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
   div#carousel ~ span {
-    color: #383232;
+    color: #8ab1ea;
     margin: 5%;
     display: inline-block;
     text-decoration: none;
@@ -89,5 +89,36 @@
   .large-hover:hover {
     padding: 4px;
     transform: scale(1.2);
+
+  }
+
+  input[type=text] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+  }
+
+  input[type=text]:focus {
+      width: 100%;
+  }
+
+  label{
+    text-align: center;
+    padding: 5px;
+    font-family: 'Permanent Marker', cursive;
+    color: #df5753;
+    font-size: 17px;
+  }
+  input#post_avatar{
+    margin-right: -90px;
+    padding: 4px;
 
   }

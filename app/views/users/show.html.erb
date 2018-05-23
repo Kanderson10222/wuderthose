@@ -5,7 +5,7 @@
 <% end %>
 </div>
 
-<div class="large-hover">
+  <div class="large-hover">
 <% @user.posts.each do |post| %>
           <p class="large-hover"><%=link_to image_tag(post.avatar.url), post %></p>
          <p class="large-hover">- <%=link_to post.post, post %></p>
