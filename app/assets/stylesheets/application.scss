@@ -19,6 +19,9 @@
   border-radius: 8px;
   padding: 10px;
   height: 210px;
+  height: 210px;
+  text-shadow: 0px 3px 6px #fb4c4c8c;
+
 }
 .title{
   font-family:'Permanent Marker', cursive;
@@ -56,6 +59,7 @@ body{
 }
 footer{
   text-align: center;
+  font-size: 16px;
 }
 .signin, .signup{
   font-family:'Permanent Marker', cursive;
